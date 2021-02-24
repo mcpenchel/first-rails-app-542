@@ -1,0 +1,19 @@
+<h1>Welcome to our website!</h1>
+
+<p>Meet our employees:</p>
+
+<h3>Chosen member is <%= params[:member] %></h3>
+
+<form action="/about" method="get">
+  <input type="text" name="member" value="<%= params[:member] %>" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @employees.each do |employee| %>
+    <li><%= employee.capitalize %></li>
+  <% end %>
+</ul>
+
+<%# if you want to create Icecream brackets easily,
+    type pe and press TAB in your keyboard %>
